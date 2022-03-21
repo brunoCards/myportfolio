@@ -1,0 +1,21 @@
+import styled from "styled-components";
+
+export const CustomButton = styled.button`
+  width: 32rem;
+  height: 6rem;
+  border: 0.2rem solid var(--secondary__purple);
+  border-radius: 0 1rem 1rem 1rem;
+
+  color: var(--secondary__purple);
+  font-size: 1.4rem;
+
+  background-color: transparent;
+
+  cursor: pointer;
+  opacity: 0.4;
+
+  &:hover {
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+  }
+`;

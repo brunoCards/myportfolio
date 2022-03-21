@@ -48,6 +48,17 @@ export const CustomBox = styled.div`
     gap: 2rem;
   }
 
+  &.icons__box__center {
+    width: 100%;
+    height: 7rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 2rem;
+  }
+
   &.button__box {
     width: 100%;
     height: 100%;

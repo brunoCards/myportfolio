@@ -24,11 +24,12 @@ export const CustomContainerBox = styled(CustomFooterContainer)`
 `;
 
 export const CustomFooterSubTitle = styled.h3`
-  width: 100%;
+  width: 80%;
   height: 2rem;
+  padding-left: 8rem;
   line-height: 2rem;
 
-  font-size: 1.5625rem;
+  font-size: 1.25rem;
   font-weight: bold;
   color: var(--primary__purple);
   text-align: center;
@@ -37,9 +38,10 @@ export const CustomFooterSubTitle = styled.h3`
 export const CustomFooterFunnyText = styled.h4`
   width: 100%;
   height: 2rem;
+  padding-left: 8rem;
   line-height: 2rem;
 
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: bold;
   color: var(--primary__purple);
   text-align: center;

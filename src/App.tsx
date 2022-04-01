@@ -15,7 +15,10 @@ function App() {
         <About />
         <Projects />
         <Contact />
-        <MainFooter />
+        <MainFooter
+          subtitle="Desenvolvido com ❤ por mim mesmo e a belinha! 🐶"
+          funnyText="Só mais uma linha de clichê nesse portifólio, acaba logo vai :)"
+        />
       </div>
     </React.Fragment>
   );

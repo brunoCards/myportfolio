@@ -51,6 +51,7 @@ export const CustomBox = styled.div`
   &.icons__box__center {
     width: 100%;
     height: 7rem;
+    padding-left: 8rem;
 
     display: flex;
     flex-direction: row;
@@ -105,5 +106,25 @@ export const CustomBox = styled.div`
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+  }
+
+  &.footer__text__box {
+    width: 85%;
+    height: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  &.upnow__button__box {
+    width: 10%;
+    height: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;

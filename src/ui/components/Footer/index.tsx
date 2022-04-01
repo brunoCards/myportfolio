@@ -8,7 +8,12 @@ import {
   CustomFooterFunnyText,
 } from "./styles";
 
-import { LinkedInIcon, GithubIcon, MailIcon } from "../Icons/styles";
+import {
+  LinkedInIcon,
+  GithubIcon,
+  MailIcon,
+  ArrowUpNowIcon,
+} from "../Icons/styles";
 
 interface MainFooterProps {
   subtitle?: string;
@@ -30,11 +35,14 @@ export default function MainFooter({
             <GithubIcon />
             <MailIcon />
           </Box>
-          <Box>
+          <Box className="footer__text__box">
             <CustomFooterSubTitle>{subtitle}</CustomFooterSubTitle>
             <CustomFooterFunnyText>{funnyText}</CustomFooterFunnyText>
           </Box>
         </CustomFooterContainer>
+        <Box className="upnow__button__box">
+          <ArrowUpNowIcon />
+        </Box>
       </CustomFooter>
     </React.Fragment>
   );

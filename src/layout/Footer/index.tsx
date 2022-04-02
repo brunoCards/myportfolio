@@ -1,5 +1,5 @@
 import React from "react";
-import Box from "../Box/index";
+import Box from "../../ui/commom/Box";
 
 import {
   CustomFooter,
@@ -13,7 +13,7 @@ import {
   GithubIcon,
   MailIcon,
   ArrowUpNowIcon,
-} from "../Icons/styles";
+} from "../../ui/commom/Icons/styles";
 
 interface MainFooterProps {
   subtitle?: string;

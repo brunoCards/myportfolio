@@ -3,7 +3,7 @@ import React from "react";
 import Box from "../../../ui/commom/Box";
 import Picture from "../../../ui/commom/Picture";
 import Section from "../../../ui/commom/Section";
-import SectionHeader from "../../SectionHeader";
+import SectionHeader from "../../../ui/commom/SectionHeader";
 
 import Paragraph from "../../../ui/commom/Typography/Paragraph";
 import TertiaryTitle from "../../../ui/commom/Typography/TertiaryTitle";

@@ -1,8 +1,8 @@
 import React from "react";
 
-import Formulary from "../../components/Formulary/index";
-import Section from "../../ui/components/Section/index";
-import SectionHeader from "../../components/SectionHeader/index";
+import Formulary from "../../Formulary/index";
+import Section from "../../../ui/components/Section/index";
+import SectionHeader from "../../SectionHeader";
 
 export default function Contact() {
   return (

@@ -8,7 +8,7 @@ export const CustomSection = styled.section`
   flex-direction: column;
   align-items: center;
 
-  &.home__section {
+  &.main__section {
     height: 70.375rem;
   }
 `;

@@ -32,6 +32,7 @@ export const GlobalStyle = createGlobalStyle`
     --quaternary__purple: #7B2CBF;
     --quinary__purple: #5A189A;
     --quinary__purple45: #5A189A45;
+    --quinary__purple15: #5A189A15;
     --senary__purple: #3C096C;
     --septenary__purple: #240046;
     --septenary__purple35: #24004635;

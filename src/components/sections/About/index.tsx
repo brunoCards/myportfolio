@@ -1,12 +1,12 @@
 import React from "react";
 
-import Box from "../../../ui/components/Box";
-import Picture from "../../../ui/components/Picture";
-import Section from "../../../ui/components/Section";
+import Box from "../../../ui/commom/Box";
+import Picture from "../../../ui/commom/Picture";
+import Section from "../../../ui/commom/Section";
 import SectionHeader from "../../SectionHeader";
 
-import Paragraph from "../../../ui/components/Typography/Paragraph";
-import TertiaryTitle from "../../../ui/components/Typography/TertiaryTitle";
+import Paragraph from "../../../ui/commom/Typography/Paragraph";
+import TertiaryTitle from "../../../ui/commom/Typography/TertiaryTitle";
 
 import Photo from "../../../assets/whoAmi__picture.png";
 
@@ -14,7 +14,7 @@ import {
   LinkedInIcon,
   GithubIcon,
   MailIcon,
-} from "../../../ui/components/Icons/styles";
+} from "../../../ui/commom/Icons/styles";
 
 export default function About() {
   return (

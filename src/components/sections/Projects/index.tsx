@@ -1,9 +1,9 @@
 import React from "react";
 
-import GridCards from "../../GridCards";
-import Section from "../../../ui/components/Section";
-import SectionHeader from "../../SectionHeader";
-import SectionFooter from "../../SectionFooter";
+import GridCards from "./GridCards";
+import Section from "../../../ui/commom/Section";
+import SectionHeader from "../../../ui/commom/SectionHeader";
+import SectionFooter from "../../../ui/commom/SectionFooter";
 
 export default function Projects() {
   return (

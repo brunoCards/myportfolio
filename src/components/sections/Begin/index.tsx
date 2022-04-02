@@ -1,19 +1,19 @@
 import React from "react";
 
-import Box from "../../../ui/components/Box";
-import Button from "../../../ui/components/Button/index";
-import Picture from "../../../ui/components/Picture";
-import QuaternaryTitle from "../../../ui/components/Typography/QuaternaryTitle";
-import SectionContainer from "../../../ui/components/SectionContainer";
-import Title from "../../../ui/components/Typography/Title";
+import Box from "../../../ui/commom/Box";
+import Button from "../../../ui/commom/Button/index";
+import Picture from "../../../ui/commom/Picture";
+import QuaternaryTitle from "../../../ui/commom/Typography/QuaternaryTitle";
+import SectionContainer from "../../../ui/commom/SectionContainer";
+import Title from "../../../ui/commom/Typography/Title";
 
 import Photo from "../../../assets/meAndBelinha__picture.png";
-import Section from "../../../ui/components/Section/index";
+import Section from "../../../ui/commom/Section/index";
 import {
   LinkedInIcon,
   GithubIcon,
   MailIcon,
-} from "../../../ui/components/Icons/styles";
+} from "../../../ui/commom/Icons/styles";
 
 export default function Begin() {
   return (

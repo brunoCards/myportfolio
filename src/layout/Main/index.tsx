@@ -2,8 +2,8 @@ import React from "react";
 
 import About from "../../components/sections/About";
 import Begin from "../../components/sections/Begin";
-import MainFooter from "../../ui/components/Footer";
-import MainHeader from "../../ui/components/Header";
+import MainFooter from "../../ui/commom/Footer";
+import MainHeader from "../Header";
 import Projects from "../../components/sections/Projects";
 import Contact from "../../components/sections/Contact";
 

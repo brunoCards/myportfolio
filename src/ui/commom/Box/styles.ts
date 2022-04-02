@@ -79,7 +79,7 @@ export const CustomBox = styled.div`
     display: flex;
     flex-direction: row;
 
-    background-color: var(--quinary__purple);
+    background-color: var(--quinary__purple15);
   }
 
   &.md__box {

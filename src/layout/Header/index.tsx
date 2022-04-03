@@ -11,7 +11,7 @@ import {
   Logo,
 } from "./styles";
 
-import LogoImage from "../../../assets/logo.png";
+import LogoImage from "../../assets/brunoCardosoDev__logo.png";
 
 interface MainHeaderProps {
   links?: string[];

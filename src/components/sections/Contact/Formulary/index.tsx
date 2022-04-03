@@ -1,7 +1,7 @@
 import React from "react";
 
 import { CustomForm, CustomInput } from "./styles";
-import Button from "../../ui/components/Button/index";
+import Button from "../../../../ui/commom/Button/index";
 
 interface FormularyProps {
   className?: string;

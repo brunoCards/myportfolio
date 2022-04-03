@@ -1,26 +1,24 @@
 import React from "react";
 
-import Box from "../../ui/components/Box";
-import MainHeader from "../../ui/components/Header/index";
-import Picture from "../../ui/components/Picture/index";
-import Section from "../../ui/components/Section/index";
-import SectionContainer from "../../ui/components/SectionContainer/index";
-import Title from "../../ui/components/Typography/Title/";
-import QuaternaryTitle from "../../ui/components/Typography/QuaternaryTitle/index";
+import Box from "../../../ui/commom/Box";
+import Button from "../../../ui/commom/Button/index";
+import Picture from "../../../ui/commom/Picture";
+import QuaternaryTitle from "../../../ui/commom/Typography/QuaternaryTitle";
+import SectionContainer from "../../../ui/commom/SectionContainer";
+import Title from "../../../ui/commom/Typography/Title";
 
-import Photo from "../../assets/picture.png";
+import Photo from "../../../assets/meAndBelinha__picture.png";
+import Section from "../../../ui/commom/Section/index";
 import {
-  GithubIcon,
   LinkedInIcon,
+  GithubIcon,
   MailIcon,
-} from "../../ui/components/Icons/styles";
-import Button from "../../ui/components/Button";
+} from "../../../ui/commom/Icons/styles";
 
-export default function Home() {
+export default function Begin() {
   return (
     <React.Fragment>
-      <MainHeader links={["Início", "Sobre mim", "Projetos", "Contato"]} />
-      <Section className="home__section">
+      <Section className="main__section">
         <SectionContainer>
           <Box>
             <Title text="E aí!" />

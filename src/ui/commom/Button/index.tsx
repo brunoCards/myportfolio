@@ -5,12 +5,15 @@ import { CustomButton } from "./styles";
 interface ButtonProps {
   text?: string;
   onClick?: () => void;
+  type?: "button" | "submit" | "reset";
 }
 
-export default function Button({ text, onClick }: ButtonProps) {
+export default function Button({ text, onClick, type }: ButtonProps) {
   return (
     <React.Fragment>
-      <CustomButton onClick={onClick}>{text}</CustomButton>
+      <CustomButton type={type} onClick={onClick}>
+        {text}
+      </CustomButton>
     </React.Fragment>
   );
 }

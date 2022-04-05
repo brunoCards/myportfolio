@@ -1,20 +1,52 @@
 import React from "react";
+import { useForm, SubmitHandler } from "react-hook-form";
 
-import { CustomForm, CustomInput } from "./styles";
 import Button from "../../../../ui/commom/Button/index";
+import { CustomForm, CustomInput } from "./styles";
 
-interface FormularyProps {
+interface IFormularyProps {
   className?: string;
+  name?: string;
+  email?: string;
+  whatsApp?: string;
 }
 
-export default function Formulary({ className }: FormularyProps) {
+export default function Formulary({
+  className,
+  name,
+  email,
+  whatsApp,
+}: IFormularyProps) {
+  const { register, handleSubmit } = useForm<IFormularyProps>();
+
+  const handleOnSubmit: SubmitHandler<IFormularyProps> = (data) =>
+    console.log(data);
+
   return (
     <React.Fragment>
-      <CustomForm className={className}>
-        <CustomInput name="name" type="text" placeholder="Nome" />
-        <CustomInput name="email" type="email" placeholder="Email" />
-        <CustomInput name="whatsapp" type="text" placeholder="Whatsapp" />
-        <Button text="Enviar" />
+      <CustomForm onSubmit={handleSubmit(handleOnSubmit)} className={className}>
+        <CustomInput
+          name="name"
+          type="text"
+          placeholder="Nome"
+          {...register("name")}
+        />
+
+        <CustomInput
+          name="email"
+          type="email"
+          placeholder="Email"
+          {...register("email")}
+        />
+
+        <CustomInput
+          name="whatsApp"
+          type="text"
+          placeholder="Whatsapp"
+          {...register("whatsApp")}
+        />
+
+        <Button type="submit" text="Enviar" />
       </CustomForm>
     </React.Fragment>
   );

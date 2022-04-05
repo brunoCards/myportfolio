@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import About from "../../components/sections/About";
 import Begin from "../../components/sections/Begin";
@@ -8,9 +8,13 @@ import Projects from "../../components/sections/Projects";
 import Contact from "../../components/sections/Contact";
 
 export default function Main() {
+  useEffect(() => {
+    window.scrollTo(0, 10);
+  }, []);
+
   return (
     <React.Fragment>
-      <MainHeader links={["Início", "Sobre mim", "Projetos", "Contato"]} />
+      <MainHeader />
       <Begin />
 
       <About />

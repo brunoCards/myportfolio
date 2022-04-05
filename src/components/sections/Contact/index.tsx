@@ -7,7 +7,7 @@ import SectionHeader from "../../../ui/commom/SectionHeader";
 export default function Contact() {
   return (
     <React.Fragment>
-      <Section className="no__padding">
+      <Section id="contact" className="no__padding">
         <SectionHeader
           title="Entre em contato
           Contact

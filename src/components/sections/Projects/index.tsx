@@ -8,7 +8,7 @@ import SectionFooter from "../../../ui/commom/SectionFooter";
 export default function Projects() {
   return (
     <React.Fragment>
-      <Section className="no__padding">
+      <Section id="projects" className="no__padding">
         <SectionHeader
           title="Projetos 
           Proyectos 

@@ -1,25 +1,18 @@
 import React from "react";
 
 import Box from "../../../ui/commom/Box";
+import Icons from "../../../ui/commom/Icons";
+import Paragraph from "../../../ui/commom/Typography/Paragraph";
+import Photo from "../../../assets/whoAmi__picture.png";
 import Picture from "../../../ui/commom/Picture";
 import Section from "../../../ui/commom/Section";
 import SectionHeader from "../../../ui/commom/SectionHeader";
-
-import Paragraph from "../../../ui/commom/Typography/Paragraph";
 import TertiaryTitle from "../../../ui/commom/Typography/TertiaryTitle";
-
-import Photo from "../../../assets/whoAmi__picture.png";
-
-import {
-  LinkedInIcon,
-  GithubIcon,
-  MailIcon,
-} from "../../../ui/commom/Icons/styles";
 
 export default function About() {
   return (
     <React.Fragment>
-      <Section className="no__padding">
+      <Section id="about" className="no__padding">
         <SectionHeader
           title="Eu
           Yo
@@ -42,11 +35,7 @@ export default function About() {
               <TertiaryTitle text="Dev Front-end" />
             </Box>
 
-            <Box className="icons__box__sm">
-              <LinkedInIcon />
-              <GithubIcon />
-              <MailIcon />
-            </Box>
+            <Icons className="icons__box__sm" />
           </Box>
 
           <Box className="md__box pd-3">

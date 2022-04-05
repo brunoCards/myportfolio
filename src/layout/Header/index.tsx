@@ -12,12 +12,9 @@ import {
 } from "./styles";
 
 import LogoImage from "../../assets/brunoCardosoDev__logo.png";
+import Paragraph from "../../ui/commom/Typography/Paragraph";
 
-interface MainHeaderProps {
-  links?: string[];
-}
-
-export default function MainHeader({ links }: MainHeaderProps) {
+export default function MainHeader() {
   return (
     <React.Fragment>
       <CustomHeader>
@@ -29,16 +26,33 @@ export default function MainHeader({ links }: MainHeaderProps) {
           <CustomContainerBox>
             <CustomNavigationMainMenu>
               <CustomMainMenu>
-                {links &&
-                  links.map((link, index) => {
-                    return (
-                      <React.Fragment key={index}>
-                        <CustomMainMenuItem>
-                          <CustomMainMenuLink>{link}</CustomMainMenuLink>
-                        </CustomMainMenuItem>
-                      </React.Fragment>
-                    );
-                  })}
+                {/* Inicio */}
+                <CustomMainMenuItem>
+                  <CustomMainMenuLink href="#begin">
+                    <Paragraph text="Início" />
+                  </CustomMainMenuLink>
+                </CustomMainMenuItem>
+
+                {/* Sobre */}
+                <CustomMainMenuItem>
+                  <CustomMainMenuLink href="#about">
+                    <Paragraph text="Sobre" />
+                  </CustomMainMenuLink>
+                </CustomMainMenuItem>
+
+                {/* Projetos */}
+                <CustomMainMenuItem>
+                  <CustomMainMenuLink href="#projects">
+                    <Paragraph text="Projetos" />
+                  </CustomMainMenuLink>
+                </CustomMainMenuItem>
+
+                {/* Contato */}
+                <CustomMainMenuItem>
+                  <CustomMainMenuLink href="#contact">
+                    <Paragraph text="Contato" />
+                  </CustomMainMenuLink>
+                </CustomMainMenuItem>
               </CustomMainMenu>
             </CustomNavigationMainMenu>
           </CustomContainerBox>

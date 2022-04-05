@@ -22,6 +22,10 @@ export default function MainFooter({
   funnyText,
   className,
 }: MainFooterProps) {
+  function handleScrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
   return (
     <React.Fragment>
       <CustomFooter>
@@ -34,7 +38,7 @@ export default function MainFooter({
           </Box>
         </CustomFooterContainer>
         <Box className="upnow__button__box">
-          <ArrowUpNowIcon />
+          <ArrowUpNowIcon onClick={() => handleScrollToTop()} />
         </Box>
       </CustomFooter>
     </React.Fragment>

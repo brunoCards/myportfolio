@@ -1,5 +1,6 @@
 import React from "react";
 import Box from "../../ui/commom/Box";
+import Icons from "../../ui/commom/Icons/index";
 
 import {
   CustomFooter,
@@ -8,12 +9,7 @@ import {
   CustomFooterFunnyText,
 } from "./styles";
 
-import {
-  LinkedInIcon,
-  GithubIcon,
-  MailIcon,
-  ArrowUpNowIcon,
-} from "../../ui/commom/Icons/styles";
+import { ArrowUpNowIcon } from "../../ui/commom/Icons/styles";
 
 interface MainFooterProps {
   subtitle?: string;
@@ -30,11 +26,8 @@ export default function MainFooter({
     <React.Fragment>
       <CustomFooter>
         <CustomFooterContainer>
-          <Box className="icons__box__center">
-            <LinkedInIcon />
-            <GithubIcon />
-            <MailIcon />
-          </Box>
+          <Icons className="icons__box__center" />
+
           <Box className="footer__text__box">
             <CustomFooterSubTitle>{subtitle}</CustomFooterSubTitle>
             <CustomFooterFunnyText>{funnyText}</CustomFooterFunnyText>

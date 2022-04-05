@@ -1,24 +1,26 @@
 import React from "react";
 
 import Box from "../../../ui/commom/Box";
-import Button from "../../../ui/commom/Button/index";
+import Button from "../../../ui/commom/Button";
+import Icons from "../../../ui/commom/Icons";
+import Photo from "../../../assets/meAndBelinha__picture.png";
 import Picture from "../../../ui/commom/Picture";
 import QuaternaryTitle from "../../../ui/commom/Typography/QuaternaryTitle";
+import Section from "../../../ui/commom/Section";
 import SectionContainer from "../../../ui/commom/SectionContainer";
 import Title from "../../../ui/commom/Typography/Title";
 
-import Photo from "../../../assets/meAndBelinha__picture.png";
-import Section from "../../../ui/commom/Section/index";
-import {
-  LinkedInIcon,
-  GithubIcon,
-  MailIcon,
-} from "../../../ui/commom/Icons/styles";
-
 export default function Begin() {
+  function handleGoToProjects(): void {
+    window.scrollTo({
+      top: document.getElementById("projects").offsetTop,
+      behavior: "smooth",
+    });
+  }
+
   return (
     <React.Fragment>
-      <Section className="main__section">
+      <Section id="begin" className="main__section">
         <SectionContainer>
           <Box>
             <Title text="E aí!" />
@@ -38,14 +40,12 @@ export default function Begin() {
         </SectionContainer>
 
         <SectionContainer className="section-container__lg">
-          <Box className="icons__box">
-            <LinkedInIcon />
-            <GithubIcon />
-            <MailIcon />
-          </Box>
-
+          <Icons className="icons__box" />
           <Box className="button__box">
-            <Button text="Dê uma olhadinha!" />
+            <Button
+              onClick={() => handleGoToProjects()}
+              text="Dê uma olhadinha!"
+            />
           </Box>
         </SectionContainer>
       </Section>

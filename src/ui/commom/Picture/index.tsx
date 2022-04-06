@@ -1,12 +1,12 @@
 import React from "react";
 import { CustomImage } from "./styles";
 
-interface PictureProps {
+interface IPictureProps {
   src: string;
   alt: string;
 }
 
-export default function Picture({ src, alt }: PictureProps) {
+export default function Picture({ src, alt }: IPictureProps) {
   return (
     <React.Fragment>
       <CustomImage src={src} alt={alt} />

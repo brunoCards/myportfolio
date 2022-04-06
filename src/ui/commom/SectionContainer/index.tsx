@@ -2,7 +2,7 @@ import React from "react";
 
 import { CustomSectionContainer } from "./styles";
 
-interface SectionContainerProps {
+interface ISectionContainerProps {
   children?: React.ReactNode;
   className?: string;
 }
@@ -10,7 +10,7 @@ interface SectionContainerProps {
 export default function SectionContainer({
   children,
   className,
-}: SectionContainerProps) {
+}: ISectionContainerProps) {
   return (
     <React.Fragment>
       <CustomSectionContainer className={className}>

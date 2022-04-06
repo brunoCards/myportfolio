@@ -1,12 +1,15 @@
 import React from "react";
 import { CustomTertiaryTitle } from "./styles";
 
-interface TertiaryTitleProps {
+interface ITertiaryTitleProps {
   text?: string;
   className?: string;
 }
 
-export default function TertiaryTitle({ className, text }: TertiaryTitleProps) {
+export default function TertiaryTitle({
+  className,
+  text,
+}: ITertiaryTitleProps) {
   return (
     <React.Fragment>
       <CustomTertiaryTitle className={className}>{text}</CustomTertiaryTitle>

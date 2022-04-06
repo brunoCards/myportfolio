@@ -2,7 +2,7 @@ import React from "react";
 import { IProject } from "./IProject";
 import { CustomCard, CustomGridCardsContainer } from "./styles";
 
-interface GridCardsProps {
+interface IGridCardsProps {
   className?: string;
   projects?: IProject[];
 }
@@ -46,7 +46,7 @@ const projectsList: IProject[] = [
   },
 ];
 
-export default function GridCards({ className, projects }: GridCardsProps) {
+export default function GridCards({ className, projects }: IGridCardsProps) {
   return (
     <React.Fragment>
       <CustomGridCardsContainer className={className}>

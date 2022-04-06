@@ -11,7 +11,7 @@ import {
 
 import { ArrowUpNowIcon } from "../../ui/commom/Icons/styles";
 
-interface MainFooterProps {
+interface IMainFooterProps {
   subtitle?: string;
   funnyText?: string;
   className?: string;
@@ -21,7 +21,7 @@ export default function MainFooter({
   subtitle,
   funnyText,
   className,
-}: MainFooterProps) {
+}: IMainFooterProps) {
   function handleScrollToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }

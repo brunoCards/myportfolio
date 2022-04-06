@@ -2,7 +2,7 @@ import React from "react";
 
 import { CustomQuaternaryTitle } from "./styles";
 
-interface QuaternaryTitleProps {
+interface IQuaternaryTitleProps {
   text?: string;
   className?: string;
 }
@@ -10,7 +10,7 @@ interface QuaternaryTitleProps {
 export default function QuaternaryTitle({
   className,
   text,
-}: QuaternaryTitleProps) {
+}: IQuaternaryTitleProps) {
   return (
     <React.Fragment>
       <CustomQuaternaryTitle className={className}>

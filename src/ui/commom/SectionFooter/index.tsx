@@ -1,7 +1,7 @@
 import React from "react";
 import { CustomSectionFooter, CustomSectionFooterText } from "./styles";
 
-interface SectionFooterProps {
+interface ISectionFooterProps {
   children?: React.ReactNode;
   className?: string;
 }
@@ -9,13 +9,11 @@ interface SectionFooterProps {
 export default function SectionFooter({
   children,
   className,
-}: SectionFooterProps) {
+}: ISectionFooterProps) {
   return (
     <React.Fragment>
       <CustomSectionFooter>
-        <CustomSectionFooterText>
-          {children}
-        </CustomSectionFooterText>
+        <CustomSectionFooterText>{children}</CustomSectionFooterText>
       </CustomSectionFooter>
     </React.Fragment>
   );

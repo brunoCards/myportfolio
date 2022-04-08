@@ -6,7 +6,7 @@ import {
   CustomSectionFunnyText,
 } from "./styles";
 
-interface SectionHeaderProps {
+interface ISectionHeaderProps {
   title: string;
   subtitle: string;
   funnyText: string;
@@ -18,7 +18,7 @@ export default function SectionHeader({
   subtitle,
   funnyText,
   className,
-}: SectionHeaderProps) {
+}: ISectionHeaderProps) {
   return (
     <React.Fragment>
       <CustomSectionHeader>

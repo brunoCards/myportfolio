@@ -1,7 +1,7 @@
 import React from "react";
 import { CustomSecondaryTitle } from "./styles";
 
-interface SecondaryTitleProps {
+interface ISecondaryTitleProps {
   text?: string;
   className?: string;
 }
@@ -9,7 +9,7 @@ interface SecondaryTitleProps {
 export default function SecondaryTitle({
   className,
   text,
-}: SecondaryTitleProps) {
+}: ISecondaryTitleProps) {
   return (
     <React.Fragment>
       <CustomSecondaryTitle className={className}>{text}</CustomSecondaryTitle>

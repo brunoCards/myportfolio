@@ -10,14 +10,9 @@ import Section from "../../../ui/commom/Section";
 import SectionContainer from "../../../ui/commom/SectionContainer";
 import Title from "../../../ui/commom/Typography/Title";
 
-export default function Begin() {
-  function handleGoToProjects(): void {
-    window.scrollTo({
-      top: document.getElementById("projects").offsetTop,
-      behavior: "smooth",
-    });
-  }
+import { handleGoToProjects } from "../../../utils/handleGoToProjects";
 
+export default function Begin() {
   return (
     <React.Fragment>
       <Section id="begin" className="main__section">

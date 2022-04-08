@@ -1,12 +1,12 @@
 import React from "react";
 import { CustomQuinaryTitle } from "./styles";
 
-interface QuinaryTitleProps {
+interface IQuinaryTitleProps {
   text?: string;
   className?: string;
 }
 
-export default function QuinaryTitle({ className, text }: QuinaryTitleProps) {
+export default function QuinaryTitle({ className, text }: IQuinaryTitleProps) {
   return (
     <React.Fragment>
       <CustomQuinaryTitle className={className}>{text}</CustomQuinaryTitle>

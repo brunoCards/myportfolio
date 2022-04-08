@@ -6,12 +6,12 @@ import { LinkedInIcon, GithubIcon, MailIcon, ArrowUpNowIcon } from "./styles";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 
-interface IconProps {
+interface ICustomIconsProps {
   onClick?: () => void;
   className?: string;
 }
 
-export default function Icons({ className, onClick }: IconProps) {
+export default function Icons({ className, onClick }: ICustomIconsProps) {
   function handleNavigateToOutsideSite(url: string): void {
     window.open(url, "_blank");
   }

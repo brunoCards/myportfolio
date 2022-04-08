@@ -14,6 +14,11 @@ import {
 import LogoImage from "../../assets/brunoCardosoDev__logo.png";
 import Paragraph from "../../ui/commom/Typography/Paragraph";
 
+import { handleGoToBegin } from "../../utils/handleGoToBegin";
+import { handleGoToProjects } from "../../utils/handleGoToProjects";
+import { handleGoToAbout } from "../../utils/handleGoToAbout";
+import { handleGoToContact } from "../../utils/handleGoToContact";
+
 export default function MainHeader() {
   return (
     <React.Fragment>
@@ -28,28 +33,28 @@ export default function MainHeader() {
               <CustomMainMenu>
                 {/* Inicio */}
                 <CustomMainMenuItem>
-                  <CustomMainMenuLink href="#begin">
+                  <CustomMainMenuLink onClick={() => handleGoToBegin()}>
                     <Paragraph text="Início" />
                   </CustomMainMenuLink>
                 </CustomMainMenuItem>
 
                 {/* Sobre */}
                 <CustomMainMenuItem>
-                  <CustomMainMenuLink href="#about">
+                  <CustomMainMenuLink onClick={() => handleGoToAbout()}>
                     <Paragraph text="Sobre" />
                   </CustomMainMenuLink>
                 </CustomMainMenuItem>
 
                 {/* Projetos */}
                 <CustomMainMenuItem>
-                  <CustomMainMenuLink href="#projects">
+                  <CustomMainMenuLink onClick={() => handleGoToProjects()}>
                     <Paragraph text="Projetos" />
                   </CustomMainMenuLink>
                 </CustomMainMenuItem>
 
                 {/* Contato */}
                 <CustomMainMenuItem>
-                  <CustomMainMenuLink href="#contact">
+                  <CustomMainMenuLink onClick={() => handleGoToContact()}>
                     <Paragraph text="Contato" />
                   </CustomMainMenuLink>
                 </CustomMainMenuItem>

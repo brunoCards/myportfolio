@@ -79,7 +79,9 @@ export const CustomBox = styled.div`
     display: flex;
     flex-direction: row;
 
-    background-color: var(--quinary__purple15);
+    background: rgba(90, 24, 154, 0.25);
+    box-shadow: 0 0.5rem 2rem 0 rgba(31, 38, 135, 0.65);
+    backdrop-filter: blur(1.5rem);
   }
 
   &.md__box {

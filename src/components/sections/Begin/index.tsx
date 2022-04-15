@@ -29,7 +29,9 @@ export default function Begin() {
           <Box className="picture__box">
             <Picture
               src={Photo}
-              alt="Bruno Cardoso Dev e sua cadelinha Belinha"
+              alt="Um homem de cor parda cabelo baixo com barba no rosto segurando
+              em seu colo sua cadelinha de cor branca com manchas marrom"
+              title="Bruno e Belinha"
             />
           </Box>
         </SectionContainer>

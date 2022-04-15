@@ -28,7 +28,11 @@ export default function About() {
 
         <Box className="about__box">
           <Box className="md__box">
-            <Picture src={Photo} alt="foto redonda do Bruno" />
+            <Picture
+              src={Photo}
+              alt="Um homem de cor parda cabelo penteado vestido com um terno preto brilhante com barba no rosto sorrindo"
+              title="Bruno de terno preto brilhante com barba no rosto sorrindo"
+            />
 
             <Box className="title__box">
               <TertiaryTitle text="Bruno da Cruz Cardoso" />

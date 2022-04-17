@@ -1,68 +1,90 @@
 import React from "react";
 
-import {
-  CustomContainerBox,
-  CustomHeader,
-  CustomHeaderContainer,
-  CustomNavigationMainMenu,
-  CustomMainMenu,
-  CustomMainMenuItem,
-  CustomMainMenuLink,
-  Logo,
-} from "./styles";
-
 import LogoImage from "../../assets/brunoCardosoDev__logo.png";
+
 import Paragraph from "../../ui/commom/Typography/Paragraph";
 
-import { handleGoToBegin } from "../../utils/handleGoToBegin";
-import { handleGoToProjects } from "../../utils/handleGoToProjects";
-import { handleGoToAbout } from "../../utils/handleGoToAbout";
-import { handleGoToContact } from "../../utils/handleGoToContact";
+import {
+  handleGoToBegin,
+  handleGoToAbout,
+  handleGoToProjects,
+  handleGoToContact,
+} from "../../utils/sectionNavigators";
+
+import headerStyles from "../../ui/styles/Header/Header.module.css";
 
 export default function MainHeader() {
   return (
     <React.Fragment>
-      <CustomHeader>
-        <CustomHeaderContainer>
-          <CustomContainerBox>
-            <Logo src={LogoImage} alt="Bruno Cardoso Dev" />
-          </CustomContainerBox>
+      <header className={headerStyles.defaultHeader}>
+        <div className={headerStyles.headerContainer}>
+          <div className={headerStyles.containerBox}>
+            <img
+              className={headerStyles.logo}
+              src={LogoImage}
+              alt="Logomarca que é representada por um par de chaves e no centro das chaves tem elipses, na frente o nome Bruno Cardoso Dev, Dev é a abreviação de Developer"
+            />
+          </div>
 
-          <CustomContainerBox>
-            <CustomNavigationMainMenu>
-              <CustomMainMenu>
+          <div className={headerStyles.containerBox}>
+            <nav className={headerStyles.navigationMainMenu}>
+              <ul className={headerStyles.mainMenuList}>
                 {/* Inicio */}
-                <CustomMainMenuItem>
-                  <CustomMainMenuLink onClick={() => handleGoToBegin()}>
-                    <Paragraph text="Início" />
-                  </CustomMainMenuLink>
-                </CustomMainMenuItem>
+                <li className={headerStyles.mainMenuListItem}>
+                  <a
+                    className={headerStyles.mainMenuLink}
+                    onClick={() => handleGoToBegin()}
+                  >
+                    <Paragraph
+                      className={headerStyles.paragraph}
+                      text="Início"
+                    />
+                  </a>
+                </li>
 
                 {/* Sobre */}
-                <CustomMainMenuItem>
-                  <CustomMainMenuLink onClick={() => handleGoToAbout()}>
-                    <Paragraph text="Sobre" />
-                  </CustomMainMenuLink>
-                </CustomMainMenuItem>
+                <li className={headerStyles.mainMenuListItem}>
+                  <a
+                    className={headerStyles.mainMenuLink}
+                    onClick={() => handleGoToAbout()}
+                  >
+                    <Paragraph
+                      className={headerStyles.paragraph}
+                      text="Sobre"
+                    />
+                  </a>
+                </li>
 
                 {/* Projetos */}
-                <CustomMainMenuItem>
-                  <CustomMainMenuLink onClick={() => handleGoToProjects()}>
-                    <Paragraph text="Projetos" />
-                  </CustomMainMenuLink>
-                </CustomMainMenuItem>
+                <li className={headerStyles.mainMenuListItem}>
+                  <a
+                    className={headerStyles.mainMenuLink}
+                    onClick={() => handleGoToProjects()}
+                  >
+                    <Paragraph
+                      className={headerStyles.paragraph}
+                      text="Projetos"
+                    />
+                  </a>
+                </li>
 
                 {/* Contato */}
-                <CustomMainMenuItem>
-                  <CustomMainMenuLink onClick={() => handleGoToContact()}>
-                    <Paragraph text="Contato" />
-                  </CustomMainMenuLink>
-                </CustomMainMenuItem>
-              </CustomMainMenu>
-            </CustomNavigationMainMenu>
-          </CustomContainerBox>
-        </CustomHeaderContainer>
-      </CustomHeader>
+                <li className={headerStyles.mainMenuListItem}>
+                  <a
+                    className={headerStyles.mainMenuLink}
+                    onClick={() => handleGoToContact()}
+                  >
+                    <Paragraph
+                      className={headerStyles.paragraph}
+                      text="Contato"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
     </React.Fragment>
   );
 }

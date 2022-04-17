@@ -10,7 +10,7 @@ import Section from "../../../ui/commom/Section";
 import SectionContainer from "../../../ui/commom/SectionContainer";
 import Title from "../../../ui/commom/Typography/Title";
 
-import { handleGoToProjects } from "../../../utils/handleGoToProjects";
+import { handleGoToProjects } from "../../../utils/sectionNavigators";
 
 export default function Begin() {
   return (

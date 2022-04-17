@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const CustomSectionHeader = styled.header`
   width: 100%;
   height: 13.1875rem;
+  padding-top: 0.5rem;
 
   display: flex;
   flex-direction: column;

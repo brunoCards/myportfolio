@@ -3,7 +3,6 @@ import React from "react";
 import Box from "../Box";
 import { LinkedInIcon, GithubIcon, MailIcon, ArrowUpNowIcon } from "./styles";
 
-import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 
 interface ICustomIconsProps {
@@ -22,8 +21,9 @@ export default function Icons({ className, onClick }: ICustomIconsProps) {
 
   function handleCopyTo(): void {
     navigator.clipboard.writeText("bruno.cards27@gmail.com");
+
     toast.success("Email copiado para a área de transferência!", {
-      position: "bottom-left",
+      position: "top-left",
       autoClose: 2000,
       hideProgressBar: true,
       closeOnClick: true,
@@ -48,9 +48,8 @@ export default function Icons({ className, onClick }: ICustomIconsProps) {
           }
         />
 
-        <MailIcon onClick={() => handleCopyTo()} />
+        <MailIcon onClick={handleCopyTo} />
       </Box>
-      <ToastContainer />
     </React.Fragment>
   );
 }

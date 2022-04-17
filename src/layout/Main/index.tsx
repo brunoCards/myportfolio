@@ -7,6 +7,8 @@ import MainHeader from "../Header";
 import Projects from "../../components/sections/Projects";
 import Contact from "../../components/sections/Contact";
 
+import { ToastContainer } from "react-toastify";
+
 export default function Main() {
   useEffect(() => {
     window.scrollTo(0, 10);
@@ -16,16 +18,14 @@ export default function Main() {
     <React.Fragment>
       <MainHeader />
       <Begin />
-
       <About />
-
       <Projects />
-
       <Contact />
       <MainFooter
         subtitle="Desenvolvido com ❤ por mim mesmo e a Belinha! 🐶"
         funnyText="Só mais uma linha de clichê nesse portifólio, acaba logo vai :)"
       />
+      <ToastContainer />
     </React.Fragment>
   );
 }

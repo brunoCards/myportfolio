@@ -1,0 +1,8 @@
+.defaultTitle {
+  color: var(--white100);
+  font-size: 6rem;
+}
+
+.highlight {
+  color: var(--quaternary__purple);
+}

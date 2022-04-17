@@ -12,33 +12,46 @@ import Title from "../../../ui/commom/Typography/Title";
 
 import { handleGoToProjects } from "../../../utils/sectionNavigators";
 
+import boxStyles from "../../../ui/styles/commom/Box/Box.module.css";
+import pictureStyles from "../../../ui/styles/commom/Picture/Picture.module.css";
+import sectionStyles from "../../../ui/styles/commom/Section/Section.module.css";
+import sectionContainerStyles from "../../../ui/styles/commom/SectionContainer/SectionContainer.module.css";
+import titleStyles from "../../../ui/styles/commom/Typography/Title/Title.module.css";
+
 export default function Begin() {
   return (
     <React.Fragment>
-      <Section id="begin" className="main__section">
-        <SectionContainer>
-          <Box>
-            <Title text="E aí!" />
-            <Box className="title-adjust__box">
-              <Title text="Eu sou o" />
-              <Title className="highlight" text="Bruno!" />
+      <Section
+        id="begin"
+        className={`${sectionStyles.mainSection} ${sectionStyles.sectionWrapper}`}
+      >
+        <SectionContainer className={sectionContainerStyles.sectionContainer}>
+          <Box className={boxStyles.defaultBox}>
+            <Title className={titleStyles.defaultTitle} text="E aí!" />
+            <Box className={boxStyles.titleAdjustBox}>
+              <Title className={titleStyles.defaultTitle} text="Eu sou o" />
+              <Title
+                className={`${titleStyles.defaultTitle} ${titleStyles.highlight}`}
+                text="Bruno!"
+              />
             </Box>
             <QuaternaryTitle text="e ela é a Belinha 🐶" />
           </Box>
 
-          <Box className="picture__box">
+          <Box className={boxStyles.pictureBox}>
             <Picture
               src={Photo}
               alt="Um homem de cor parda cabelo baixo com barba no rosto segurando
               em seu colo sua cadelinha de cor branca com manchas marrom"
               title="Bruno e Belinha"
+              className={pictureStyles.defaultImage}
             />
           </Box>
         </SectionContainer>
 
-        <SectionContainer className="section-container__lg">
-          <Icons className="icons__box" />
-          <Box className="button__box">
+        <SectionContainer className={sectionContainerStyles.sectionContainerLg}>
+          <Icons className={boxStyles.iconsBox} />
+          <Box className={boxStyles.buttonBox}>
             <Button
               onClick={() => handleGoToProjects()}
               text="Dê uma olhadinha!"

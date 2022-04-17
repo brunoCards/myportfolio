@@ -1,7 +1,5 @@
 import React from "react";
 
-import { CustomSection, CustomSectionWrapper } from "./styles";
-
 interface ISectionProps {
   children?: React.ReactNode;
   className?: string;
@@ -11,11 +9,9 @@ interface ISectionProps {
 export default function Section({ children, className, id }: ISectionProps) {
   return (
     <React.Fragment>
-      <CustomSection id={id} className={className}>
-        <CustomSectionWrapper className={className}>
-          {children}
-        </CustomSectionWrapper>
-      </CustomSection>
+      <section id={id} className={className}>
+        <div className={className}>{children}</div>
+      </section>
     </React.Fragment>
   );
 }

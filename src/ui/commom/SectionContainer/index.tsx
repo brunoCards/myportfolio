@@ -1,7 +1,5 @@
 import React from "react";
 
-import { CustomSectionContainer } from "./styles";
-
 interface ISectionContainerProps {
   children?: React.ReactNode;
   className?: string;
@@ -13,9 +11,7 @@ export default function SectionContainer({
 }: ISectionContainerProps) {
   return (
     <React.Fragment>
-      <CustomSectionContainer className={className}>
-        {children}
-      </CustomSectionContainer>
+      <div className={className}>{children}</div>
     </React.Fragment>
   );
 }

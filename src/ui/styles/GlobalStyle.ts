@@ -37,6 +37,13 @@ export const GlobalStyle = createGlobalStyle`
     --septenary__purple: #240046;
     --septenary__purple35: #24004635;
     --octonary__purple: #10002B;
-    --golden__yellow: #DAA520;    
+    --octonary__purple30: #10002B30;
+    --golden__yellow: #DAA520;
+    --orange__html: #FF5733;
+    --blue__css3: #0000FF;
+    --yellow__js: #F0DB4F;
+    --blue__reactjs:#61DBFB;
+    --blue__materialui: #2196F3;
+    --orange__git: #F1502F;
   }
 `;

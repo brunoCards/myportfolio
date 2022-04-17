@@ -37,15 +37,15 @@ export const CustomBox = styled.div`
   }
 
   &.icons__box__sm {
-    width: 100%;
+    width: 40%;
     height: 30%;
-    border-right: 0.1rem solid var(--golden__yellow);
+    padding: 0 1rem 1.5rem 0;
 
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: flex-end;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
   &.icons__box__center {
@@ -87,6 +87,7 @@ export const CustomBox = styled.div`
   &.md__box {
     width: 50%;
     height: 100%;
+    padding-top: 2rem;
 
     display: flex;
 
@@ -96,18 +97,50 @@ export const CustomBox = styled.div`
     gap: 0.5rem;
   }
 
-  &.pd-3 {
-    padding: 3rem;
-  }
-
   &.title__box {
     width: 100%;
-    height: 10%;
+    height: 20%;
 
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+  }
+
+  &.techs__box {
+    width: 35%;
+    height: 25rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &.tech-title__box {
+    width: 100%;
+    height: 3rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.tech__shields {
+    width: 80%;
+    height: 8rem;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  &.pd-3 {
+    padding: 3rem;
   }
 
   &.footer__text__box {

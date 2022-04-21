@@ -1,5 +1,6 @@
+//#region react
 import React from "react";
-import { CustomParagraph } from "./styles";
+//#endregion
 
 interface IParagraphProps {
   text?: string;
@@ -9,7 +10,7 @@ interface IParagraphProps {
 export default function Paragraph({ className, text }: IParagraphProps) {
   return (
     <React.Fragment>
-      <CustomParagraph className={className}>{text}</CustomParagraph>
+      <p className={className}>{text}</p>
     </React.Fragment>
   );
 }

@@ -23,12 +23,12 @@ import Photo from "../../../assets/meAndBelinha__picture.png";
 
 //#region css modules
 import boxStyles from "../../../ui/styles/commom/Box/Box.module.css";
+import buttonStyles from "../../../ui/styles/commom/Button/Button.module.css";
 import pictureStyles from "../../../ui/styles/commom/Picture/Picture.module.css";
 import quaternaryStyles from "../../../ui/styles/commom/Typography/QuaternaryTitle/Quaternary.module.css";
 import sectionStyles from "../../../ui/styles/commom/Section/Section.module.css";
 import sectionContainerStyles from "../../../ui/styles/commom/SectionContainer/SectionContainer.module.css";
 import titleStyles from "../../../ui/styles/commom/Typography/Title/Title.module.css";
-
 //#endregion
 
 export default function Begin() {
@@ -70,7 +70,11 @@ export default function Begin() {
         <SectionContainer className={sectionContainerStyles.sectionContainerLg}>
           <Icons className={boxStyles.iconsBox} />
           <Box className={boxStyles.buttonBox}>
-            <Button onClick={handleGoToProjects} text="Dê uma olhadinha!" />
+            <Button
+              onClick={handleGoToProjects}
+              text="Dê uma olhadinha!"
+              className={buttonStyles.default}
+            />
           </Box>
         </SectionContainer>
       </Section>

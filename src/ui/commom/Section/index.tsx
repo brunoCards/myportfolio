@@ -1,4 +1,6 @@
+//#region react
 import React from "react";
+//#endregion
 
 interface ISectionProps {
   children?: React.ReactNode;

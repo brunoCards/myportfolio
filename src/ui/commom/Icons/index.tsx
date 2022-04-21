@@ -1,10 +1,19 @@
+//#region react
 import React from "react";
+//#endregion
 
+//#region ui commom components
 import Box from "../Box";
-import { LinkedInIcon, GithubIcon, MailIcon, ArrowUpNowIcon } from "./styles";
+//#endregion
 
+//#region internal styled-components
+import { LinkedInIcon, GithubIcon, MailIcon, ArrowUpNowIcon } from "./styles";
+//#endregion
+
+//#region toasts
 import "react-toastify/dist/ReactToastify.min.css";
 import { toast } from "react-toastify";
+//#endregion
 
 interface ICustomIconsProps {
   onClick?: () => void;

@@ -103,7 +103,7 @@ export default function About() {
           <Box className={`${boxStyles.mdBox} ${boxStyles.pd3}`}>
             <Box className={boxStyles.titleBox}>
               <TertiaryTitle
-                className={`${tertiaryStyles.startText} ${tertiaryStyles.sectionParagraphTitle}`}
+                className={tertiaryStyles.sectionParagraphTitle}
                 text="Sobre mim"
               />
             </Box>

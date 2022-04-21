@@ -1,5 +1,6 @@
+//#region react
 import React from "react";
-import { CustomSecondaryTitle } from "./styles";
+//#endregion
 
 interface ISecondaryTitleProps {
   text?: string;
@@ -12,7 +13,7 @@ export default function SecondaryTitle({
 }: ISecondaryTitleProps) {
   return (
     <React.Fragment>
-      <CustomSecondaryTitle className={className}>{text}</CustomSecondaryTitle>
+      <h2 className={className}>{text}</h2>
     </React.Fragment>
   );
 }

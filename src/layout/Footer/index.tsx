@@ -1,15 +1,17 @@
+//#region react
 import React from "react";
+//#endregion
+
+//#region ui commom components
 import Box from "../../ui/commom/Box";
 import Icons from "../../ui/commom/Icons/index";
-
-import {
-  CustomFooter,
-  CustomFooterContainer,
-  CustomFooterSubTitle,
-  CustomFooterFunnyText,
-} from "./styles";
-
 import { ArrowUpNowIcon } from "../../ui/commom/Icons/styles";
+//#endregion
+
+//#region css modules
+import boxStyles from "../../ui/styles/commom/Box/Box.module.css";
+import footerStyles from "../../ui/styles/Footer/Footer.module.css";
+//#endregion
 
 interface IMainFooterProps {
   subtitle?: string;
@@ -28,19 +30,19 @@ export default function MainFooter({
 
   return (
     <React.Fragment>
-      <CustomFooter>
-        <CustomFooterContainer>
-          <Icons className="icons__box__center" />
+      <footer className={footerStyles.default}>
+        <div className={footerStyles.footerContainer}>
+          <Icons className={boxStyles.iconsBoxCenter} />
 
-          <Box className="footer__text__box">
-            <CustomFooterSubTitle>{subtitle}</CustomFooterSubTitle>
-            <CustomFooterFunnyText>{funnyText}</CustomFooterFunnyText>
+          <Box className={boxStyles.footerTextBox}>
+            <h3 className={footerStyles.footerSubTitle}>{subtitle}</h3>
+            <h4 className={footerStyles.footerFunnyText}>{funnyText}</h4>
           </Box>
-        </CustomFooterContainer>
-        <Box className="upnow__button__box">
+        </div>
+        <Box className={boxStyles.upnowButtonBox}>
           <ArrowUpNowIcon onClick={() => handleScrollToTop()} />
         </Box>
-      </CustomFooter>
+      </footer>
     </React.Fragment>
   );
 }

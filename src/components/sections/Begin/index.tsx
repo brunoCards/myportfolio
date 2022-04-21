@@ -19,6 +19,7 @@ import Title from "../../../ui/commom/Typography/Title";
 
 //#region assets
 import Photo from "../../../assets/meAndBelinha__picture.png";
+import BgVideo from "../../../assets/bg_video.mp4";
 //#endregion
 
 //#region css modules
@@ -29,6 +30,7 @@ import quaternaryStyles from "../../../ui/styles/commom/Typography/QuaternaryTit
 import sectionStyles from "../../../ui/styles/commom/Section/Section.module.css";
 import sectionContainerStyles from "../../../ui/styles/commom/SectionContainer/SectionContainer.module.css";
 import titleStyles from "../../../ui/styles/commom/Typography/Title/Title.module.css";
+import videoStyles from "../../../ui/styles/Video/Video.module.css";
 //#endregion
 
 export default function Begin() {
@@ -36,47 +38,57 @@ export default function Begin() {
 
   return (
     <React.Fragment>
-      <Section
-        id="begin"
-        className={`${sectionStyles.mainSection} ${sectionStyles.sectionWrapper}`}
-      >
-        <SectionContainer className={sectionContainerStyles.sectionContainer}>
-          <Box className={boxStyles.defaultBox}>
-            <Title className={titleStyles.defaultTitle} text="E aí!" />
-            <Box className={boxStyles.titleAdjustBox}>
-              <Title className={titleStyles.defaultTitle} text="Eu sou o" />
-              <Title
-                className={`${titleStyles.defaultTitle} ${titleStyles.highlight}`}
-                text="Bruno!"
+      <Section id="begin" className={sectionStyles.mainSection}>
+        <div className={sectionStyles.overlay} />
+        <video
+          src={BgVideo}
+          autoPlay
+          loop
+          muted
+          className={videoStyles.default}
+        />
+
+        <div className={sectionStyles.mainSectionWrapper}>
+          <SectionContainer className={sectionContainerStyles.sectionContainer}>
+            <Box className={boxStyles.defaultBox}>
+              <Title className={titleStyles.defaultTitle} text="E aí!" />
+              <Box className={boxStyles.titleAdjustBox}>
+                <Title className={titleStyles.defaultTitle} text="Eu sou o" />
+                <Title
+                  className={`${titleStyles.defaultTitle} ${titleStyles.highlight}`}
+                  text="Bruno!"
+                />
+              </Box>
+              <QuaternaryTitle
+                className={quaternaryStyles.defaultQuaternaryTitle}
+                text="e ela é a Belinha 🐶"
               />
             </Box>
-            <QuaternaryTitle
-              className={quaternaryStyles.defaultQuaternaryTitle}
-              text="e ela é a Belinha 🐶"
-            />
-          </Box>
 
-          <Box className={boxStyles.pictureBox}>
-            <Picture
-              src={Photo}
-              alt="Um homem de cor parda cabelo baixo com barba no rosto segurando
+            <Box className={boxStyles.pictureBox}>
+              <Picture
+                src={Photo}
+                alt="Um homem de cor parda cabelo baixo com barba no rosto segurando
               em seu colo sua cadelinha de cor branca com manchas marrom"
-              title="Bruno e Belinha"
-              className={pictureStyles.defaultImage}
-            />
-          </Box>
-        </SectionContainer>
+                title="Bruno e Belinha"
+                className={pictureStyles.defaultImage}
+              />
+            </Box>
+          </SectionContainer>
 
-        <SectionContainer className={sectionContainerStyles.sectionContainerLg}>
-          <Icons className={boxStyles.iconsBox} />
-          <Box className={boxStyles.buttonBox}>
-            <Button
-              onClick={handleGoToProjects}
-              text="Dê uma olhadinha!"
-              className={buttonStyles.default}
-            />
-          </Box>
-        </SectionContainer>
+          <SectionContainer
+            className={sectionContainerStyles.sectionContainerLg}
+          >
+            <Icons className={boxStyles.iconsBox} />
+            <Box className={boxStyles.buttonBox}>
+              <Button
+                onClick={handleGoToProjects}
+                text="Dê uma olhadinha!"
+                className={buttonStyles.default}
+              />
+            </Box>
+          </SectionContainer>
+        </div>
       </Section>
     </React.Fragment>
   );

@@ -1,5 +1,5 @@
 div .sectionContainer {
-  width: 80%;
+  width: 65%;
   height: 30rem;
   margin: 1rem 0 0 3rem;
 
@@ -8,7 +8,7 @@ div .sectionContainer {
 }
 
 div .sectionContainerLg {
-  width: 80%;
+  width: 65%;
   height: 14rem;
 
   display: flex;

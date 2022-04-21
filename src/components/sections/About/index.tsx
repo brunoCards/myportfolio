@@ -39,11 +39,12 @@ import tertiaryStyles from "../../../ui/styles/commom/Typography/TertiaryTitle/T
 //#endregion
 
 export default function About() {
-  const { handleGoToProjects } = useAnchorsNavigation();
-
   return (
     <React.Fragment>
-      <Section id="about" className={sectionStyles.noPadding}>
+      <Section
+        id="about"
+        className={`${sectionStyles.defaultSection} ${sectionStyles.noPadding} `}
+      >
         <SectionHeader
           title="Eu
           Yo

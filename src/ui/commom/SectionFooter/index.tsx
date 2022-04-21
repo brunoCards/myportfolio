@@ -1,5 +1,6 @@
+//#region react
 import React from "react";
-import { CustomSectionFooter, CustomSectionFooterText } from "./styles";
+//#endregion
 
 interface ISectionFooterProps {
   children?: React.ReactNode;
@@ -12,9 +13,9 @@ export default function SectionFooter({
 }: ISectionFooterProps) {
   return (
     <React.Fragment>
-      <CustomSectionFooter>
-        <CustomSectionFooterText>{children}</CustomSectionFooterText>
-      </CustomSectionFooter>
+      <footer className={className}>
+        <h4 className={className}>{children}</h4>
+      </footer>
     </React.Fragment>
   );
 }

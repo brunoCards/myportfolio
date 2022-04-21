@@ -1,6 +1,4 @@
-import styled from "styled-components";
-
-export const CustomSectionFooter = styled.footer`
+footer.default {
   width: 100%;
   height: auto;
   padding-top: 2rem;
@@ -8,9 +6,9 @@ export const CustomSectionFooter = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+}
 
-export const CustomSectionFooterText = styled.h4`
+h4.sectionFooterText {
   width: 100%;
   height: 6rem;
   line-height: 6rem;
@@ -19,4 +17,4 @@ export const CustomSectionFooterText = styled.h4`
   font-weight: bold;
   color: var(--primary__purple);
   text-align: center;
-`;
+}

@@ -1,6 +1,4 @@
-import styled from "styled-components";
-
-export const CustomButton = styled.button`
+button.default {
   width: 32rem;
   height: 6rem;
   border: 0.2rem solid var(--secondary__purple);
@@ -13,9 +11,9 @@ export const CustomButton = styled.button`
 
   cursor: pointer;
   opacity: 0.4;
+}
 
-  &:hover {
-    transition: all 0.3s ease-in-out;
-    opacity: 1;
-  }
-`;
+button.default:hover {
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+}

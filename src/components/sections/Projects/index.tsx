@@ -8,14 +8,23 @@ import GridCards from "./GridCards";
 
 //#region ui commons components
 import Section from "../../../ui/commom/Section";
+import SectionFooter from "../../../ui/commom/SectionFooter";
 import SectionHeader from "../../../ui/commom/SectionHeader";
-import SectionFooter from "../../../ui/styles/commom/SectionFooter";
+//#endregion
+
+//#region css modules
+import sectionFooter from "../../../ui/styles/commom/SectionFooter/SectionFooter.module.css";
+import sectionHeader from "../../../ui/styles/commom/SectionHeader/SectionHeader.module.css";
+import sectionStyles from "../../../ui/styles/commom/Section/Section.module.css";
 //#endregion
 
 export default function Projects() {
   return (
     <React.Fragment>
-      <Section id="projects" className="no__padding">
+      <Section
+        id="projects"
+        className={`${sectionStyles.defaultSection} ${sectionStyles.noPadding} `}
+      >
         <SectionHeader
           title="Projetos 
           Proyectos 
@@ -23,9 +32,12 @@ export default function Projects() {
           プロジェクト"
           subtitle="O projeto era impossível até que alguem foi lá e fez!"
           funnyText="Exato! Tudo isso ainda faz parte das minhas piadocas :)"
+          className={`${sectionHeader.defaultSectionHeader} ${sectionHeader.sectionHeaderTitle} ${sectionHeader.sectionHeaderSubTitle} ${sectionHeader.sectionHeaderFunnyText}`}
         />
         <GridCards />
-        <SectionFooter>
+        <SectionFooter
+          className={`${sectionFooter.default} ${sectionFooter.sectionFooterText}`}
+        >
           <span style={{ textDecoration: "line-through", opacity: 0.2 }}>
             Im
           </span>

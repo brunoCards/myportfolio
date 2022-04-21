@@ -1,5 +1,6 @@
+//#region react
 import React from "react";
-import { CustomTitle } from "./styles";
+//#endregion
 
 interface ITitleProps {
   text?: string;
@@ -9,7 +10,7 @@ interface ITitleProps {
 export default function Title({ text, className }: ITitleProps) {
   return (
     <React.Fragment>
-      <CustomTitle className={className}>{text}</CustomTitle>
+      <h1 className={className}>{text}</h1>
     </React.Fragment>
   );
 }

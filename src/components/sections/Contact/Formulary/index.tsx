@@ -1,8 +1,19 @@
+//#region react
 import React from "react";
-import { useForm, SubmitHandler } from "react-hook-form";
+//#endregion
 
-import Button from "../../../../ui/commom/Button/index";
-import { CustomForm, CustomInput } from "./styles";
+//#region react-hook-form
+import { useForm, SubmitHandler } from "react-hook-form";
+//#endregion
+
+//#region ui commom components
+import Button from "../../../../ui/commom/Button/";
+//#endregion
+
+//#region css modules
+import buttonStyles from "../../../../ui/styles/commom/Button/Button.module.css";
+import formStyles from "./Formulary.module.css";
+//#endregion
 
 interface IFormularyProps {
   className?: string;
@@ -24,30 +35,36 @@ export default function Formulary({
 
   return (
     <React.Fragment>
-      <CustomForm onSubmit={handleSubmit(handleOnSubmit)} className={className}>
-        <CustomInput
+      <form
+        onSubmit={handleSubmit(handleOnSubmit)}
+        className={formStyles.defaultForm}
+      >
+        <input
+          className={formStyles.defaultInput}
           name="name"
           type="text"
           placeholder="Nome"
           {...register("name")}
         />
 
-        <CustomInput
+        <input
+          className={formStyles.defaultInput}
           name="email"
           type="email"
           placeholder="Email"
           {...register("email")}
         />
 
-        <CustomInput
+        <input
+          className={formStyles.defaultInput}
           name="whatsApp"
           type="text"
           placeholder="Whatsapp"
           {...register("whatsApp")}
         />
 
-        <Button type="submit" text="Enviar" />
-      </CustomForm>
+        <Button type="submit" text="Enviar" className={buttonStyles.default} />
+      </form>
     </React.Fragment>
   );
 }

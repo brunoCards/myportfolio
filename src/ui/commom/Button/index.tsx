@@ -1,19 +1,25 @@
+//#region react
 import React from "react";
-
-import { CustomButton } from "./styles";
+//#endregion
 
 interface IButtonProps {
   text?: string;
   onClick?: () => void;
   type?: "button" | "submit" | "reset";
+  className?: string;
 }
 
-export default function Button({ text, onClick, type }: IButtonProps) {
+export default function Button({
+  text,
+  onClick,
+  type,
+  className,
+}: IButtonProps) {
   return (
     <React.Fragment>
-      <CustomButton type={type} onClick={onClick}>
+      <button type={type} onClick={onClick} className={className}>
         {text}
-      </CustomButton>
+      </button>
     </React.Fragment>
   );
 }

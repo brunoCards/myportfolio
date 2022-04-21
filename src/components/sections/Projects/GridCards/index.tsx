@@ -1,6 +1,14 @@
+//#region react
 import React from "react";
+//#endregion
+
+//#region interfaces
 import { IProject } from "./IProject";
-import { CustomCard, CustomGridCardsContainer } from "./styles";
+//#endregion
+
+//#region css modules
+import gridCardsStyles from "./GridCards.module.css";
+//#endregion
 
 interface IGridCardsProps {
   className?: string;
@@ -49,22 +57,22 @@ const projectsList: IProject[] = [
 export default function GridCards({ className, projects }: IGridCardsProps) {
   return (
     <React.Fragment>
-      <CustomGridCardsContainer className={className}>
+      <div className={gridCardsStyles.gridCardsContainer}>
         <React.Fragment>
           {projectsList.map((project: IProject, index: number) => {
             return (
               <React.Fragment key={index}>
-                <CustomCard>
+                <div className={gridCardsStyles.card}>
                   {project.title}
                   {project.description}
                   {project.thumbnail}
                   {project.images}
-                </CustomCard>
+                </div>
               </React.Fragment>
             );
           })}
         </React.Fragment>
-      </CustomGridCardsContainer>
+      </div>
     </React.Fragment>
   );
 }

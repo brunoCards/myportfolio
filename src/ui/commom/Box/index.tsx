@@ -1,6 +1,6 @@
+//#region react
 import React from "react";
-
-import { CustomBox } from "./styles";
+//#endregion
 
 interface IBoxProps {
   children?: React.ReactNode;
@@ -10,7 +10,7 @@ interface IBoxProps {
 export default function Box({ children, className }: IBoxProps) {
   return (
     <React.Fragment>
-      <CustomBox className={className}>{children}</CustomBox>
+      <div className={className}>{children}</div>
     </React.Fragment>
   );
 }

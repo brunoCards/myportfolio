@@ -4,6 +4,7 @@ import Box from "../Box";
 import { LinkedInIcon, GithubIcon, MailIcon, ArrowUpNowIcon } from "./styles";
 
 import "react-toastify/dist/ReactToastify.min.css";
+import { toast } from "react-toastify";
 
 interface ICustomIconsProps {
   onClick?: () => void;

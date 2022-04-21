@@ -1,14 +1,14 @@
+//#region react
 import React from "react";
+//#endregion
 
+//#region custom hooks
+import { useAnchorsNavigation } from "../../../hooks/useAnchorsNavigation";
+//#endregion
+
+//#region ui commons components
 import Box from "../../../ui/commom/Box";
 import Icons from "../../../ui/commom/Icons";
-import Paragraph from "../../../ui/commom/Typography/Paragraph";
-import Photo from "../../../assets/whoAmi__picture.png";
-import Picture from "../../../ui/commom/Picture";
-import Section from "../../../ui/commom/Section";
-import SectionHeader from "../../../ui/commom/SectionHeader";
-import TertiaryTitle from "../../../ui/commom/Typography/TertiaryTitle";
-
 import {
   Css3ShielIcon,
   GitShielIcon,
@@ -18,11 +18,32 @@ import {
   ReactShielIcon,
   StyledComponentsShielIcon,
 } from "../../../ui/commom/Icons/styles";
+import Paragraph from "../../../ui/commom/Typography/Paragraph";
+import Picture from "../../../ui/commom/Picture";
+import Section from "../../../ui/commom/Section";
+import SectionHeader from "../../../ui/commom/SectionHeader";
+import TertiaryTitle from "../../../ui/commom/Typography/TertiaryTitle";
+//#endregion
+
+//#region assets
+import Photo from "../../../assets/whoAmi__picture.png";
+//#endregion
+
+//#region css modules
+import boxStyles from "../../../ui/styles/commom/Box/Box.module.css";
+import paragraphStyles from "../../../ui/styles/commom/Typography/Paragraph/Paragraph.module.css";
+import pictureStyles from "../../../ui/styles/commom/Picture/Picture.module.css";
+import sectionHeader from "../../../ui/styles/commom/SectionHeader/SectionHeader.module.css";
+import sectionStyles from "../../../ui/styles/commom/Section/Section.module.css";
+import tertiaryStyles from "../../../ui/styles/commom/Typography/TertiaryTitle/Tertiary.module.css";
+//#endregion
 
 export default function About() {
+  const { handleGoToProjects } = useAnchorsNavigation();
+
   return (
     <React.Fragment>
-      <Section id="about" className="no__padding">
+      <Section id="about" className={sectionStyles.noPadding}>
         <SectionHeader
           title="Eu
           Yo
@@ -34,27 +55,31 @@ export default function About() {
           私"
           subtitle="Eu quero, eu posso, eu vou conseguir!"
           funnyText="Mentira, rs, só tá escrito “eu” em alguns idiomas! :)"
+          className={`${sectionHeader.defaultSectionHeader} ${sectionHeader.sectionHeaderTitle} ${sectionHeader.sectionHeaderSubTitle} ${sectionHeader.sectionHeaderFunnyText}`}
         />
 
-        <Box className="about__box">
-          <Box className="md__box">
+        <Box className={boxStyles.aboutBox}>
+          <Box className={boxStyles.mdBox}>
             <Picture
               src={Photo}
               alt="Um homem de cor parda cabelo penteado vestido com um terno preto brilhante com barba no rosto sorrindo"
               title="Bruno de terno preto brilhante com barba no rosto sorrindo"
+              className={pictureStyles.defaultImage}
             />
 
-            <Box className="title__box">
-              <TertiaryTitle className="italic" text="Bruno da Cruz Cardoso" />
-              <TertiaryTitle className="italic" text="Dev Front-end" />
+            <Box className={boxStyles.titleBox}>
+              <TertiaryTitle
+                className={tertiaryStyles.italic}
+                text="Bruno da Cruz Cardoso"
+              />
+              <TertiaryTitle
+                className={tertiaryStyles.italic}
+                text="Dev Front-end"
+              />
             </Box>
 
-            <Box className="techs__box">
-              {/* <Box className="tech-title__box">
-                <SecondaryTitle text="Tecnologias" />
-              </Box> */}
-
-              <Box className="tech__shields">
+            <Box className={boxStyles.techsBox}>
+              <Box className={boxStyles.techShields}>
                 <HtmlShielIcon />
 
                 <Css3ShielIcon />
@@ -71,13 +96,13 @@ export default function About() {
               </Box>
             </Box>
 
-            <Icons className="icons__box__sm" />
+            <Icons className={boxStyles.iconsBoxSm} />
           </Box>
 
-          <Box className="md__box pd-3">
-            <Box className="title__box">
+          <Box className={`${boxStyles.mdBox} ${boxStyles.pd3}`}>
+            <Box className={boxStyles.titleBox}>
               <TertiaryTitle
-                className="start-text section__paragraph-title"
+                className={`${tertiaryStyles.startText} ${tertiaryStyles.sectionParagraphTitle}`}
                 text="Sobre mim"
               />
             </Box>
@@ -101,6 +126,7 @@ export default function About() {
               React no frontend e Node no backend, 2 meses depois de concluir o curso recebi meu primeiro
               sim como dev júnior, e agora hoje vivo em busca de novos aprendizados e sempre buscando mais
               para me tornar o mais especialista possível."
+              className={paragraphStyles.defaultParagraph}
             />
           </Box>
         </Box>

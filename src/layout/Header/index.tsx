@@ -1,19 +1,31 @@
+//#region react
 import React from "react";
+//#endregion
 
+//#region custom hooks
+import { useAnchorsNavigation } from "../../hooks/useAnchorsNavigation";
+//#endregion
+
+//#region assets
 import LogoImage from "../../assets/brunoCardosoDev__logo.png";
+//#endregion
 
+//#region ui commons components
 import Paragraph from "../../ui/commom/Typography/Paragraph";
+//#endregion
 
-import {
-  handleGoToBegin,
-  handleGoToAbout,
-  handleGoToProjects,
-  handleGoToContact,
-} from "../../utils/sectionNavigators";
-
+//#region css modules
 import headerStyles from "../../ui/styles/Header/Header.module.css";
+//#endregion
 
 export default function MainHeader() {
+  const {
+    handleGoToAbout,
+    handleGoToBegin,
+    handleGoToContact,
+    handleGoToProjects,
+  } = useAnchorsNavigation();
+
   return (
     <React.Fragment>
       <header className={headerStyles.defaultHeader}>
@@ -33,7 +45,7 @@ export default function MainHeader() {
                 <li className={headerStyles.mainMenuListItem}>
                   <a
                     className={headerStyles.mainMenuLink}
-                    onClick={() => handleGoToBegin()}
+                    onClick={handleGoToBegin}
                   >
                     <Paragraph
                       className={headerStyles.paragraph}
@@ -46,7 +58,7 @@ export default function MainHeader() {
                 <li className={headerStyles.mainMenuListItem}>
                   <a
                     className={headerStyles.mainMenuLink}
-                    onClick={() => handleGoToAbout()}
+                    onClick={handleGoToAbout}
                   >
                     <Paragraph
                       className={headerStyles.paragraph}
@@ -59,7 +71,7 @@ export default function MainHeader() {
                 <li className={headerStyles.mainMenuListItem}>
                   <a
                     className={headerStyles.mainMenuLink}
-                    onClick={() => handleGoToProjects()}
+                    onClick={handleGoToProjects}
                   >
                     <Paragraph
                       className={headerStyles.paragraph}
@@ -72,7 +84,7 @@ export default function MainHeader() {
                 <li className={headerStyles.mainMenuListItem}>
                   <a
                     className={headerStyles.mainMenuLink}
-                    onClick={() => handleGoToContact()}
+                    onClick={handleGoToContact}
                   >
                     <Paragraph
                       className={headerStyles.paragraph}

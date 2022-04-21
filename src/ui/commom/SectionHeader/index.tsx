@@ -1,10 +1,6 @@
+//#region react
 import React from "react";
-import {
-  CustomSectionHeader,
-  CustomSectionHeaderTitle,
-  CustomSectionHeaderSubTitle,
-  CustomSectionFunnyText,
-} from "./styles";
+//#endregion
 
 interface ISectionHeaderProps {
   title: string;
@@ -21,11 +17,11 @@ export default function SectionHeader({
 }: ISectionHeaderProps) {
   return (
     <React.Fragment>
-      <CustomSectionHeader>
-        <CustomSectionHeaderTitle>{title}</CustomSectionHeaderTitle>
-        <CustomSectionHeaderSubTitle>{subtitle}</CustomSectionHeaderSubTitle>
-        <CustomSectionFunnyText>{funnyText}</CustomSectionFunnyText>
-      </CustomSectionHeader>
+      <header className={className}>
+        <h2 className={className}>{title}</h2>
+        <h3 className={className}>{subtitle}</h3>
+        <h4 className={className}>{funnyText}</h4>
+      </header>
     </React.Fragment>
   );
 }

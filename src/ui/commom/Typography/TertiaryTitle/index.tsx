@@ -1,5 +1,6 @@
+//#region react
 import React from "react";
-import { CustomTertiaryTitle } from "./styles";
+//#endregion
 
 interface ITertiaryTitleProps {
   text?: string;
@@ -12,7 +13,7 @@ export default function TertiaryTitle({
 }: ITertiaryTitleProps) {
   return (
     <React.Fragment>
-      <CustomTertiaryTitle className={className}>{text}</CustomTertiaryTitle>
+      <h3 className={className}>{text}</h3>
     </React.Fragment>
   );
 }

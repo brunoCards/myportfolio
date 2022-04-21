@@ -1,24 +1,39 @@
+//#region react
 import React from "react";
+//#endregion
 
+//#region custom hooks
+import { useAnchorsNavigation } from "../../../hooks/useAnchorsNavigation";
+//#endregion
+
+//#region ui commons components
 import Box from "../../../ui/commom/Box";
 import Button from "../../../ui/commom/Button";
 import Icons from "../../../ui/commom/Icons";
-import Photo from "../../../assets/meAndBelinha__picture.png";
-import Picture from "../../../ui/commom/Picture";
 import QuaternaryTitle from "../../../ui/commom/Typography/QuaternaryTitle";
+import Picture from "../../../ui/commom/Picture";
 import Section from "../../../ui/commom/Section";
 import SectionContainer from "../../../ui/commom/SectionContainer";
 import Title from "../../../ui/commom/Typography/Title";
+//#endregion
 
-import { handleGoToProjects } from "../../../utils/sectionNavigators";
+//#region assets
+import Photo from "../../../assets/meAndBelinha__picture.png";
+//#endregion
 
+//#region css modules
 import boxStyles from "../../../ui/styles/commom/Box/Box.module.css";
 import pictureStyles from "../../../ui/styles/commom/Picture/Picture.module.css";
+import quaternaryStyles from "../../../ui/styles/commom/Typography/QuaternaryTitle/Quaternary.module.css";
 import sectionStyles from "../../../ui/styles/commom/Section/Section.module.css";
 import sectionContainerStyles from "../../../ui/styles/commom/SectionContainer/SectionContainer.module.css";
 import titleStyles from "../../../ui/styles/commom/Typography/Title/Title.module.css";
 
+//#endregion
+
 export default function Begin() {
+  const { handleGoToProjects } = useAnchorsNavigation();
+
   return (
     <React.Fragment>
       <Section
@@ -35,7 +50,10 @@ export default function Begin() {
                 text="Bruno!"
               />
             </Box>
-            <QuaternaryTitle text="e ela é a Belinha 🐶" />
+            <QuaternaryTitle
+              className={quaternaryStyles.defaultQuaternaryTitle}
+              text="e ela é a Belinha 🐶"
+            />
           </Box>
 
           <Box className={boxStyles.pictureBox}>
@@ -52,10 +70,7 @@ export default function Begin() {
         <SectionContainer className={sectionContainerStyles.sectionContainerLg}>
           <Icons className={boxStyles.iconsBox} />
           <Box className={boxStyles.buttonBox}>
-            <Button
-              onClick={() => handleGoToProjects()}
-              text="Dê uma olhadinha!"
-            />
+            <Button onClick={handleGoToProjects} text="Dê uma olhadinha!" />
           </Box>
         </SectionContainer>
       </Section>

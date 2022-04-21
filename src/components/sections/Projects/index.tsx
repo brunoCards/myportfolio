@@ -1,9 +1,16 @@
+//#region react
 import React from "react";
+//#endregion
 
+//#region internal components
 import GridCards from "./GridCards";
+//#endregion
+
+//#region ui commons components
 import Section from "../../../ui/commom/Section";
 import SectionHeader from "../../../ui/commom/SectionHeader";
-import SectionFooter from "../../../ui/commom/SectionFooter";
+import SectionFooter from "../../../ui/styles/commom/SectionFooter";
+//#endregion
 
 export default function Projects() {
   return (

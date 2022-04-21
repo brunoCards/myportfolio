@@ -1,16 +1,16 @@
 import React from "react";
-import { CustomImage } from "./styles";
 
 interface IPictureProps {
   src: string;
   alt: string;
   title: string;
+  className?: string;
 }
 
-export default function Picture({ src, alt, title }: IPictureProps) {
+export default function Picture({ src, alt, title, className }: IPictureProps) {
   return (
     <React.Fragment>
-      <CustomImage src={src} alt={alt} title={title} />
+      <img src={src} alt={alt} title={title} className={className} />
     </React.Fragment>
   );
 }

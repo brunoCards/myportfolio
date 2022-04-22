@@ -1,5 +1,5 @@
 //#region react
-import React from "react";
+import React, { useEffect, useState } from "react";
 //#endregion
 
 //#region custom hooks
@@ -26,9 +26,29 @@ export default function MainHeader() {
     handleGoToProjects,
   } = useAnchorsNavigation();
 
+  const [navbar, setNavbar] = useState(false);
+
+  useEffect(() => {
+    function handleChangeNavbarBackgroundColor() {
+      if (window.scrollY > 50) {
+        setNavbar(true);
+      } else {
+        setNavbar(false);
+      }
+    }
+
+    window.addEventListener("scroll", handleChangeNavbarBackgroundColor);
+  }, []);
+
   return (
     <React.Fragment>
-      <header className={headerStyles.defaultHeader}>
+      <header
+        className={
+          navbar
+            ? `${headerStyles.defaultHeader} ${headerStyles.active}`
+            : `${headerStyles.defaultHeader}`
+        }
+      >
         <div className={headerStyles.headerContainer}>
           <div className={headerStyles.containerBox}>
             <img

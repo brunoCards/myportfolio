@@ -28,8 +28,10 @@ export const GlobalStyle = createGlobalStyle`
     --white__100: #FFFFFF;
     --primary__purple: #E0AAFF;
     --secondary__purple: #C77DFF;
+    --secondary__purple55: #C77DFF55;
     --tertiary__purple: #9D4EDD;
     --quaternary__purple: #7B2CBF;
+    --quaternary__purple65: #7B2CBF65;
     --quinary__purple: #5A189A;
     --quinary__purple45: #5A189A45;
     --quinary__purple15: #5A189A15;

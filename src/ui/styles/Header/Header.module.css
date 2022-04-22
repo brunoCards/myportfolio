@@ -5,6 +5,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  position: fixed;
+  z-index: 10;
+}
+
+.active {
+  background: var(--dark__background);
+
+  transition: all 0.3s ease-in-out;
 }
 
 .headerContainer {
